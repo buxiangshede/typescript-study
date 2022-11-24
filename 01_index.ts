@@ -7,7 +7,7 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 
-//编译 tsc 01_index.js 
+// 编译 tsc 01_index.js 
 let a: number;
 a = 10;
 console.log(a, 'ts')
@@ -19,5 +19,10 @@ const class1 = (params: number): number => {
 
 const b: number = class1(22)
 console.log(b, 'b')
+
+// 当变量的声明和赋值是同时进行的,TS编译器会自动判断变量类型， 可以省略掉类型声明
+let m = true;
+// m = 1; // 提示错误
+m = false
 
 export { }
